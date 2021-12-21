@@ -1,5 +1,3 @@
-require 'flickr'
-
 class StaticPagesController < ApplicationController
   before_action :set_flickr
 

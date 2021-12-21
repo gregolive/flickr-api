@@ -60,3 +60,4 @@ gem "figaro"
 gem 'bulma-rails', '~> 0.9.2'
 gem 'simple_form', '~> 5.1'
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
+gem 'flickr', '~> 2.0', '>= 2.0.2'
