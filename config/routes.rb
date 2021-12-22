@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/:home' => 'static_pages#home'
+  post '', to: 'static_pages#results', as: :results
 
   root 'static_pages#home'
 end

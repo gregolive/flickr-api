@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <%= simple_form_for(results_path, defaults: { required: false }) do |f| %>
+          <div class="field">
+            <label class="label">Search by Flickr ID</label>
+            <div class="control has-icons-left">
+              <input class="input" type="text" placeholder="194620399@N05">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </div>
+          </div>
+          <%= f.button :submit, 'View Photos', class: "button is-link" %>
+        <% end %>
+      </div>
+    </div> 
+  </div>
+</section>

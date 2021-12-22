@@ -25,7 +25,15 @@
 // to keep footer on bottom
 .flex-wrapper {
   display: flex;
-  min-height: calc(100vh - 52px);
+  min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+}
+
+// center content on screen
+.section {
+  margin-top: 25vh;
+}
+.columns {
+  justify-content: center;
 }
