@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+  <div class="notification is-success global-notification">
+    <p class="notice"><%= notice %></p>
+  </div>
+<% elsif flash[:alert] %>
+  <div class="notification is-danger global-notification">
+    <p class="alert"><%= alert %></p>
+  </div>
+<% else %>
+  <div class="notification is-info global-notification">
+    <p class="alert">Welcome to Flickr Photostream 👋</p>
+  </div>
+<% end %>

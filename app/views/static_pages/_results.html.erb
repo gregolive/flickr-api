@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="http://farm<%= @user.iconfarm %>.staticflickr.com/<%= @user.iconserver %>/buddyicons/<%= @user.nsid %>.jpg" alt="Flickr buddyicon" class="is-rounded">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4"><%= @user.realname %></p>
+        <p class="subtitle is-6"><%= @user.username %> | <a href="<%= @user.profileurl %>">View on flickr</a></p>
+      </div>
+    </div>
+    <div class="gallery">
+      <% @photos.each do |photo| %>
+        <img src="https://live.staticflickr.com/<%= photo.server %>/<%= photo.id %>_<%= photo.secret %>_n.jpg" alt="<%= photo.owner %> <%= photo.id %>">
+      <% end %>
+    </div>
+  </div>
+</div>

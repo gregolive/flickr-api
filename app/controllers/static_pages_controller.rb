@@ -1,23 +1,24 @@
 class StaticPagesController < ApplicationController
-  before_action :set_flickr_api, only: %i[results]
+  before_action :set_query
 
-  ENV['FLICKR_API_KEY']
-  ENV['FLICKR_SHARED_SECRET']
+  def index
+    return if @query.nil?
 
-  def home
-  end
-
-  def results
-    @query = params[:/][:user]
-    @user = @flickr.people.getInfo user_id: @query rescue nil
-    if @user
-      @photos = @flickr.people.getPhotos user_id: @query
+    begin
+      flickr = Flickr.new
+      @user = flickr.people.getInfo user_id: @query
+    rescue StandardError
+      flash[:alert] = "Whoops! 🤭 No user found with ID: #{@query}"
+      redirect_to root_path
+    else
+      flash[:notice] = "Success! 🎉 Flickr user found with ID: #{@query}"
+      @photos = flickr.people.getPhotos user_id: @query
     end
   end
 
   private
 
-  def set_flickr_api
-    @flickr = Flickr.new
+  def set_query
+    @query = params[:query][:user] rescue nil
   end
 end
