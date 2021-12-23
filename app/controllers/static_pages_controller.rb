@@ -1,9 +1,6 @@
 class StaticPagesController < ApplicationController
   before_action :set_query
 
-  ENV['FLICKR_API_KEY']
-  ENV['FLICKR_SHARED_SECRET']
-
   def index
     return if @query.nil?
 
