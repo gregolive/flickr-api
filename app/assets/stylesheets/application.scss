@@ -31,9 +31,16 @@
 }
 
 // center content on screen
-.section {
-  margin-top: 25vh;
-}
 .columns {
   justify-content: center;
+}
+
+// push down search bar from top of screen
+.search.section {
+  margin-top: 5vh;
+}
+
+// pull up no results section to search bar
+.noresults.section {
+  margin-top: -35vh;
 }
