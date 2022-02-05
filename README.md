@@ -4,7 +4,7 @@ A Rails app for displaying a flickr user's photos by searching via their user ID
 
 ## Live demo
 
-Avaliable via [Heroku](https://salty-citadel-66479.herokuapp.com/) 👈
+Avaliable via [Heroku](https://flickr-photostream.herokuapp.com/) 👈
 
 ## Features
 
